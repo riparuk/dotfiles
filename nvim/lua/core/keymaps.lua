@@ -18,13 +18,19 @@ vim.keymap.set('n', '<C-k>', ':resize -2<CR>', opts)
 vim.keymap.set('n', '<C-j>', ':resize +2<CR>', opts)
 vim.keymap.set('n', '<C-l>', ':vertical resize -2<CR>', opts)
 vim.keymap.set('n', '<C-h>', ':vertical resize +2<CR>', opts)
+vim.keymap.set('n', '<C-d>', '<C-d>zz', opts)
+vim.keymap.set('n', '<C-u>', '<C-u>zz', opts)
 
 -- FzfLua
-vim.keymap.set('n', '<C-g>', ':FzfLua live_grep<CR>', opts)	-- search live text in current working directory
-vim.keymap.set('n', '<C-p>', ':FzfLua files<CR>', opts)	-- search files in current working directory
+vim.keymap.set('n', '<leader>g', ':FzfLua live_grep<CR>', opts)	-- search live text in current working directory
+vim.keymap.set('n', '<leader>p', ':FzfLua files<CR>', opts)	-- search files in current working directory
+vim.keymap.set('n', '<leader>b', ':FzfLua buffers<CR>', opts)
 
--- Neotree
-vim.keymap.set('n', '<Leader>e', ':Neotree toggle<CR>', opts)	-- Open Neotree Explorer
+-- Nvim tree
+vim.keymap.set('n', '<Leader>e', ':NvimTreeToggle<CR>', opts)	-- Open Explorer
+
+-- GitSigns
+vim.keymap.set('n', '<C-w>p', ':Gitsigns preview_hunk<CR>', opts)	-- For preview git hunk
 
 -----------------
 -- Visual mode --
