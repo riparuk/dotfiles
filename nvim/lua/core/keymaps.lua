@@ -32,6 +32,10 @@ vim.keymap.set('n', '<Leader>e', ':NvimTreeToggle<CR>', opts)	-- Open Explorer
 -- GitSigns
 vim.keymap.set('n', '<C-w>p', ':Gitsigns preview_hunk<CR>', opts)	-- For preview git hunk
 
+-- lspconfig
+vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)	-- go to definition
+vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)	-- go to definition
+
 -----------------
 -- Visual mode --
 -----------------
