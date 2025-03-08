@@ -13,11 +13,13 @@ return {
 	  require("mason").setup()
 
 	  require("mason-lspconfig").setup({
-		ensure_installed = { "lua_ls", "clangd", "pyright", "ts_ls"},
+		ensure_installed = { "lua_ls", "clangd", "pyright"},
 	  })
 	  --
 	  -- Konfigurasi LSP menggunakan lspconfig
 	  local lspconfig = require("lspconfig")
+
+	  -- Konfigurasi handler untuk lspconfig mason
 	  require("mason-lspconfig").setup_handlers {
 		-- The first entry (without a key) will be the default handler
 		-- and will be called for each installed server that doesn't have
