@@ -9,5 +9,3 @@ require("core.keymaps")
 
 -- Plugins setup
 require("config.lazy")
-
-
